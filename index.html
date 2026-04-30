@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#2D313A" />
-    <title>Comfort Time — недвижимость в Астане | Купить, продать, ипотека</title>
+    <title data-i18n="meta.title">Comfort Time — недвижимость в Астане | Купить, продать, ипотека</title>
     <meta
       name="description"
+      data-i18n-attr="content"
+      data-i18n="meta.description"
       content="Comfort Time — агентство недвижимости в Астане. Поможем купить, продать квартиру и подобрать самую выгодную ипотеку. БЦ «Фаворит», 13 этаж."
     />
     <meta name="keywords" content="недвижимость Астана, купить квартиру Астана, продать квартиру, ипотека Астана, Comfort Time, агентство недвижимости" />
@@ -21,7 +23,7 @@
     <link rel="icon" type="image/jpeg" href="logo/logo.jpg" />
     <link rel="apple-touch-icon" href="logo/logo.jpg" />
 
-    <!-- Fonts: Manrope (corp / headings) + Inter (body) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,8 +75,8 @@
     <div class="hidden md:block bg-brand-ink text-white/80 text-sm">
       <div class="container flex items-center justify-between h-10">
         <div class="flex items-center gap-6">
-          <span class="inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i> Астана, БЦ «Фаворит», 13 этаж, офис 1302</span>
-          <span class="inline-flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-brand-gold"></i> Пн–Пт 10:00–19:00 · Сб 10:00–16:00</span>
+          <span class="inline-flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i> <span data-i18n="top.address">Астана, БЦ «Фаворит», 13 этаж, офис 1302</span></span>
+          <span class="inline-flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-brand-gold"></i> <span data-i18n="top.hours">Пн–Пт 10:00–19:00 · Сб 10:00–16:00</span></span>
         </div>
         <div class="flex items-center gap-4">
           <a href="https://www.instagram.com/comfort_time.official/" target="_blank" rel="noopener" class="hover:text-brand-gold transition inline-flex items-center gap-1.5">
@@ -89,39 +91,46 @@
 
     <!-- Header -->
     <header id="header" class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-black/5 transition">
-      <div class="container flex items-center justify-between h-20">
-        <a href="#" class="flex items-center gap-3 group">
+      <div class="container flex items-center justify-between h-20 gap-4">
+        <a href="#" class="flex items-center gap-3 group shrink-0">
           <span class="relative inline-flex items-center justify-center w-12 h-12 rounded-xl overflow-hidden ring-1 ring-black/5 bg-white">
             <img src="logo/logo.jpg" alt="Comfort Time logo" class="w-full h-full object-cover" />
           </span>
           <span class="leading-tight">
             <span class="block font-display font-extrabold text-xl tracking-tight">Comfort<span class="text-brand-gold">Time</span></span>
-            <span class="block text-[11px] uppercase tracking-[0.18em] text-brand-ink/60">Недвижимость · Астана</span>
+            <span class="block text-[11px] uppercase tracking-[0.18em] text-brand-ink/60" data-i18n="header.tagline">Недвижимость · Астана</span>
           </span>
         </a>
 
         <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium">
-          <a href="#about" class="hover:text-brand-gold-dark transition">О нас</a>
-          <a href="#services" class="hover:text-brand-gold-dark transition">Услуги</a>
-          <a href="#process" class="hover:text-brand-gold-dark transition">Как работаем</a>
-          <a href="#mortgage" class="hover:text-brand-gold-dark transition">Ипотека</a>
-          <a href="#contacts" class="hover:text-brand-gold-dark transition">Контакты</a>
+          <a href="#about" class="hover:text-brand-gold-dark transition" data-i18n="nav.about">О нас</a>
+          <a href="#services" class="hover:text-brand-gold-dark transition" data-i18n="nav.services">Услуги</a>
+          <a href="#process" class="hover:text-brand-gold-dark transition" data-i18n="nav.process">Как работаем</a>
+          <a href="#mortgage" class="hover:text-brand-gold-dark transition" data-i18n="nav.mortgage">Ипотека</a>
+          <a href="#contacts" class="hover:text-brand-gold-dark transition" data-i18n="nav.contacts">Контакты</a>
         </nav>
 
         <div class="flex items-center gap-2">
+          <!-- Language switcher -->
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn is-active" data-lang="ru">RU</button>
+            <button type="button" class="lang-btn" data-lang="kk">KZ</button>
+          </div>
+
           <a
             href="https://wa.me/77474425848"
             target="_blank"
             rel="noopener"
-            class="hidden sm:inline-flex items-center gap-2 px-4 h-11 rounded-full border border-brand-ink/15 hover:border-brand-gold hover:text-brand-gold-dark transition font-medium"
+            class="hidden xl:inline-flex items-center gap-2 px-4 h-11 rounded-full border border-brand-ink/15 hover:border-brand-gold hover:text-brand-gold-dark transition font-medium"
           >
             <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
           </a>
           <a
             href="#contacts"
-            class="inline-flex items-center gap-2 px-5 h-11 rounded-full bg-brand-gold text-brand-ink font-semibold shadow-gold hover:brightness-95 transition"
+            class="hidden sm:inline-flex items-center gap-2 px-5 h-11 rounded-full bg-brand-gold text-brand-ink font-semibold shadow-gold hover:brightness-95 transition"
+            data-i18n="header.cta"
           >
-            <i data-lucide="phone-call" class="w-4 h-4"></i> Связаться
+            <i data-lucide="phone-call" class="w-4 h-4"></i> <span data-i18n="header.cta_text">Связаться</span>
           </a>
           <button id="burger" class="lg:hidden ml-1 inline-flex items-center justify-center w-11 h-11 rounded-full border border-black/10" aria-label="Меню">
             <i data-lucide="menu" class="w-5 h-5"></i>
@@ -132,23 +141,21 @@
       <!-- Mobile nav -->
       <div id="mobileNav" class="lg:hidden hidden border-t border-black/5 bg-white">
         <nav class="container py-4 flex flex-col gap-1 text-[15px] font-medium">
-          <a href="#about" class="py-2.5 border-b border-black/5">О нас</a>
-          <a href="#services" class="py-2.5 border-b border-black/5">Услуги</a>
-          <a href="#process" class="py-2.5 border-b border-black/5">Как работаем</a>
-          <a href="#mortgage" class="py-2.5 border-b border-black/5">Ипотека</a>
-          <a href="#contacts" class="py-2.5">Контакты</a>
+          <a href="#about" class="py-2.5 border-b border-black/5" data-i18n="nav.about">О нас</a>
+          <a href="#services" class="py-2.5 border-b border-black/5" data-i18n="nav.services">Услуги</a>
+          <a href="#process" class="py-2.5 border-b border-black/5" data-i18n="nav.process">Как работаем</a>
+          <a href="#mortgage" class="py-2.5 border-b border-black/5" data-i18n="nav.mortgage">Ипотека</a>
+          <a href="#contacts" class="py-2.5" data-i18n="nav.contacts">Контакты</a>
         </nav>
       </div>
     </header>
 
     <!-- HERO -->
     <section class="hero relative overflow-hidden bg-brand-ink text-white">
-      <!-- background photo -->
       <div class="hero-bg" aria-hidden="true">
         <img src="fon-hero.jpg" alt="" class="hero-bg__img" loading="eager" fetchpriority="high" />
         <div class="hero-bg__overlay"></div>
       </div>
-      <!-- decorative gradients -->
       <div class="hero-glow"></div>
       <div class="hero-grid"></div>
 
@@ -156,21 +163,21 @@
         <div class="lg:col-span-7" data-aos="fade-up">
           <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-[0.2em] text-brand-gold">
             <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
-            Агентство недвижимости №1 для вашего комфорта
+            <span data-i18n="hero.badge">Агентство недвижимости №1 для вашего комфорта</span>
           </span>
 
           <h1 class="mt-6 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight">
-            Дом мечты —
+            <span data-i18n="hero.title.1">Дом мечты —</span>
             <span class="relative inline-block">
-              <span class="text-brand-gold">это просто</span>
+              <span class="text-brand-gold" data-i18n="hero.title.accent">это просто</span>
               <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none" aria-hidden="true">
                 <path d="M2 9 C 80 1, 220 1, 298 9" stroke="#F1C62A" stroke-width="3" stroke-linecap="round" />
               </svg>
             </span>
-            <br />когда рядом профессионалы.
+            <br /><span data-i18n="hero.title.2">когда рядом профессионалы.</span>
           </h1>
 
-          <p class="mt-6 text-lg text-white/70 max-w-xl">
+          <p class="mt-6 text-lg text-white/70 max-w-xl" data-i18n="hero.subtitle">
             Поможем купить или продать недвижимость в Астане и подберём ипотеку
             на самых выгодных условиях. Экономим ваше время — работаем для вашего комфорта.
           </p>
@@ -178,27 +185,26 @@
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#contacts" class="btn-gold">
               <i data-lucide="calendar-check-2" class="w-5 h-5"></i>
-              Бесплатная консультация
+              <span data-i18n="hero.cta_consult">Бесплатная консультация</span>
             </a>
             <a href="https://wa.me/77474425848" target="_blank" rel="noopener" class="btn-ghost">
               <i data-lucide="message-circle-more" class="w-5 h-5"></i>
-              Написать в WhatsApp
+              <span data-i18n="hero.cta_wa">Написать в WhatsApp</span>
             </a>
           </div>
 
-          <!-- mini-stats -->
           <dl class="mt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
             <div>
               <dt class="text-3xl sm:text-4xl font-display font-extrabold text-brand-gold"><span data-counter="500">0</span>+</dt>
-              <dd class="mt-1 text-sm text-white/60">довольных клиентов</dd>
+              <dd class="mt-1 text-sm text-white/60" data-i18n="hero.stat1">довольных клиентов</dd>
             </div>
             <div>
               <dt class="text-3xl sm:text-4xl font-display font-extrabold text-brand-gold"><span data-counter="15">0</span>+</dt>
-              <dd class="mt-1 text-sm text-white/60">банков-партнёров</dd>
+              <dd class="mt-1 text-sm text-white/60" data-i18n="hero.stat2">банков-партнёров</dd>
             </div>
             <div>
               <dt class="text-3xl sm:text-4xl font-display font-extrabold text-brand-gold"><span data-counter="7">0</span></dt>
-              <dd class="mt-1 text-sm text-white/60">лет на рынке</dd>
+              <dd class="mt-1 text-sm text-white/60" data-i18n="hero.stat3">лет на рынке</dd>
             </div>
           </dl>
         </div>
@@ -211,17 +217,17 @@
                   <i data-lucide="sparkles" class="w-5 h-5"></i>
                 </span>
                 <div>
-                  <p class="text-sm text-white/60">Подбор за 24 часа</p>
-                  <p class="font-semibold">Заявка на услугу</p>
+                  <p class="text-sm text-white/60" data-i18n="hero.form.sub">Подбор за 24 часа</p>
+                  <p class="font-semibold" data-i18n="hero.form.title">Заявка на услугу</p>
                 </div>
               </div>
-              <span class="text-xs text-white/40">Бесплатно</span>
+              <span class="text-xs text-white/40" data-i18n="hero.form.free">Бесплатно</span>
             </div>
 
             <form id="heroForm" class="mt-6 grid gap-3" novalidate>
               <label class="field">
                 <i data-lucide="user" class="w-4 h-4"></i>
-                <input required name="name" type="text" placeholder="Ваше имя" />
+                <input required name="name" type="text" data-i18n-attr="placeholder" data-i18n="form.name_ph" placeholder="Ваше имя" />
               </label>
               <label class="field">
                 <i data-lucide="phone" class="w-4 h-4"></i>
@@ -230,18 +236,18 @@
               <label class="field">
                 <i data-lucide="list-checks" class="w-4 h-4"></i>
                 <select name="service">
-                  <option value="Покупка">Хочу купить недвижимость</option>
-                  <option value="Продажа">Хочу продать недвижимость</option>
-                  <option value="Ипотека">Подбор ипотеки</option>
-                  <option value="Консультация">Просто консультация</option>
+                  <option value="Покупка" data-i18n="form.opt1">Хочу купить недвижимость</option>
+                  <option value="Продажа" data-i18n="form.opt2">Хочу продать недвижимость</option>
+                  <option value="Ипотека" data-i18n="form.opt3">Подбор ипотеки</option>
+                  <option value="Консультация" data-i18n="form.opt4">Просто консультация</option>
                 </select>
               </label>
 
               <button type="submit" class="btn-gold justify-center mt-1">
                 <i data-lucide="send" class="w-5 h-5"></i>
-                Отправить заявку
+                <span data-i18n="form.submit_hero">Отправить заявку</span>
               </button>
-              <p class="text-[11px] text-white/45 leading-relaxed">
+              <p class="text-[11px] text-white/45 leading-relaxed" data-i18n="form.privacy">
                 Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
                 и условиями конфиденциальности.
               </p>
@@ -250,13 +256,11 @@
         </div>
       </div>
 
-      <!-- scroll hint -->
-      <a href="#about" class="hero-scroll" aria-label="Прокрутить вниз">
+      <a href="#about" class="hero-scroll" aria-label="Scroll">
         <span class="hero-scroll__mouse"><span class="hero-scroll__dot"></span></span>
-        <span class="hero-scroll__text">Узнать больше</span>
+        <span class="hero-scroll__text" data-i18n="hero.scroll">Узнать больше</span>
       </a>
 
-      <!-- marquee -->
       <div class="border-t border-white/10 bg-brand-ink-2/60">
         <div class="marquee py-5 text-white/50 text-sm uppercase tracking-[0.25em]">
           <div class="marquee__track">
@@ -281,7 +285,7 @@
             <div class="aspect-[4/5] rounded-3xl overflow-hidden ring-1 ring-black/5 shadow-soft">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop"
-                alt="Современная квартира в Астане"
+                alt="Comfort Time"
                 class="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -291,8 +295,8 @@
                 <i data-lucide="shield-check" class="w-6 h-6"></i>
               </span>
               <div>
-                <p class="font-display font-bold">100% безопасно</p>
-                <p class="text-sm text-brand-ink/60">Юридическая чистота сделки</p>
+                <p class="font-display font-bold" data-i18n="about.badge1.title">100% безопасно</p>
+                <p class="text-sm text-brand-ink/60" data-i18n="about.badge1.desc">Юридическая чистота сделки</p>
               </div>
             </div>
             <div class="hidden sm:flex absolute -top-6 -left-6 bg-brand-ink text-white rounded-2xl shadow-soft p-5 items-center gap-4 ring-1 ring-white/5">
@@ -300,59 +304,56 @@
                 <i data-lucide="trending-up" class="w-6 h-6"></i>
               </span>
               <div>
-                <p class="font-display font-bold">95% сделок</p>
-                <p class="text-sm text-white/60">закрываем в срок</p>
+                <p class="font-display font-bold" data-i18n="about.badge2.title">95% сделок</p>
+                <p class="text-sm text-white/60" data-i18n="about.badge2.desc">закрываем в срок</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="lg:col-span-7" data-aos="fade-left">
-          <span class="eyebrow">О компании</span>
-          <h2 class="section-title">
-            Ваш надёжный партнёр <br />на рынке недвижимости Астаны
+          <span class="eyebrow" data-i18n="about.eyebrow">О компании</span>
+          <h2 class="section-title" data-i18n="about.title">
+            Ваш надёжный партнёр на рынке недвижимости Астаны
           </h2>
-          <p class="mt-5 text-lg text-brand-ink/70 max-w-2xl">
-            <strong>Comfort Time</strong> — агентство, где каждый клиент получает
-            индивидуальный подход и сопровождение на всех этапах сделки. Мы берём
-            на себя поиск, переговоры, юридическую проверку и оформление, чтобы
-            вы получили только результат — ключи или средства.
+          <p class="mt-5 text-lg text-brand-ink/70 max-w-2xl" data-i18n="about.desc">
+            Comfort Time — агентство, где каждый клиент получает индивидуальный подход и сопровождение на всех этапах сделки. Мы берём на себя поиск, переговоры, юридическую проверку и оформление, чтобы вы получили только результат — ключи или средства.
           </p>
 
           <ul class="mt-8 grid sm:grid-cols-2 gap-4">
             <li class="feature-item">
               <i data-lucide="users-round"></i>
               <div>
-                <h4>Команда экспертов</h4>
-                <p>Опытные риелторы и юристы в одной команде.</p>
+                <h4 data-i18n="about.f1.title">Команда экспертов</h4>
+                <p data-i18n="about.f1.desc">Опытные риелторы и юристы в одной команде.</p>
               </div>
             </li>
             <li class="feature-item">
               <i data-lucide="hourglass"></i>
               <div>
-                <h4>Экономим ваше время</h4>
-                <p>Берём всю рутину и переговоры на себя.</p>
+                <h4 data-i18n="about.f2.title">Экономим ваше время</h4>
+                <p data-i18n="about.f2.desc">Берём всю рутину и переговоры на себя.</p>
               </div>
             </li>
             <li class="feature-item">
               <i data-lucide="scale"></i>
               <div>
-                <h4>Прозрачные условия</h4>
-                <p>Никаких скрытых комиссий и сюрпризов.</p>
+                <h4 data-i18n="about.f3.title">Прозрачные условия</h4>
+                <p data-i18n="about.f3.desc">Никаких скрытых комиссий и сюрпризов.</p>
               </div>
             </li>
             <li class="feature-item">
               <i data-lucide="handshake"></i>
               <div>
-                <h4>Лучшие условия</h4>
-                <p>Подбираем самый выгодный вариант под ваш случай.</p>
+                <h4 data-i18n="about.f4.title">Лучшие условия</h4>
+                <p data-i18n="about.f4.desc">Подбираем самый выгодный вариант под ваш случай.</p>
               </div>
             </li>
           </ul>
 
           <div class="mt-9 flex flex-wrap gap-3">
             <a href="#services" class="btn-dark">
-              <i data-lucide="layout-grid" class="w-5 h-5"></i> Наши услуги
+              <i data-lucide="layout-grid" class="w-5 h-5"></i> <span data-i18n="about.cta1">Наши услуги</span>
             </a>
             <a href="tel:+77474425848" class="btn-outline">
               <i data-lucide="phone" class="w-5 h-5"></i> +7 747 442 5848
@@ -366,9 +367,9 @@
     <section id="services" class="py-20 lg:py-28 bg-[#F8F8F6]">
       <div class="container">
         <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
-          <span class="eyebrow">Услуги</span>
-          <h2 class="section-title">Полный цикл операций с недвижимостью</h2>
-          <p class="mt-4 text-brand-ink/70">
+          <span class="eyebrow" data-i18n="services.eyebrow">Услуги</span>
+          <h2 class="section-title" data-i18n="services.title">Полный цикл операций с недвижимостью</h2>
+          <p class="mt-4 text-brand-ink/70" data-i18n="services.desc">
             От первого звонка до подписания договора — всё под ключ.
           </p>
         </div>
@@ -376,30 +377,30 @@
         <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <article class="service-card" data-aos="fade-up" data-aos-delay="0">
             <span class="service-icon"><i data-lucide="home"></i></span>
-            <h3>Покупка недвижимости</h3>
-            <p>Подберём квартиру или дом по вашим критериям, проверим документы и проведём сделку.</p>
-            <span class="service-link">Подобрать вариант <i data-lucide="arrow-up-right"></i></span>
+            <h3 data-i18n="services.s1.title">Покупка недвижимости</h3>
+            <p data-i18n="services.s1.desc">Подберём квартиру или дом по вашим критериям, проверим документы и проведём сделку.</p>
+            <span class="service-link"><span data-i18n="services.s1.link">Подобрать вариант</span> <i data-lucide="arrow-up-right"></i></span>
           </article>
 
           <article class="service-card" data-aos="fade-up" data-aos-delay="100">
             <span class="service-icon"><i data-lucide="key-round"></i></span>
-            <h3>Продажа недвижимости</h3>
-            <p>Оценим объект, подготовим презентацию, найдём покупателя и продадим по лучшей цене.</p>
-            <span class="service-link">Продать объект <i data-lucide="arrow-up-right"></i></span>
+            <h3 data-i18n="services.s2.title">Продажа недвижимости</h3>
+            <p data-i18n="services.s2.desc">Оценим объект, подготовим презентацию, найдём покупателя и продадим по лучшей цене.</p>
+            <span class="service-link"><span data-i18n="services.s2.link">Продать объект</span> <i data-lucide="arrow-up-right"></i></span>
           </article>
 
           <article class="service-card" data-aos="fade-up" data-aos-delay="200">
             <span class="service-icon"><i data-lucide="percent"></i></span>
-            <h3>Ипотека и рассрочка</h3>
-            <p>Сравним условия 15+ банков и подберём ипотеку с минимальной ставкой и переплатой.</p>
-            <span class="service-link">Рассчитать ипотеку <i data-lucide="arrow-up-right"></i></span>
+            <h3 data-i18n="services.s3.title">Ипотека и рассрочка</h3>
+            <p data-i18n="services.s3.desc">Сравним условия 15+ банков и подберём ипотеку с минимальной ставкой и переплатой.</p>
+            <span class="service-link"><span data-i18n="services.s3.link">Рассчитать ипотеку</span> <i data-lucide="arrow-up-right"></i></span>
           </article>
 
           <article class="service-card" data-aos="fade-up" data-aos-delay="300">
             <span class="service-icon"><i data-lucide="file-check-2"></i></span>
-            <h3>Юридическое сопровождение</h3>
-            <p>Проверим чистоту объекта, подготовим договоры и обеспечим безопасность сделки.</p>
-            <span class="service-link">Получить помощь <i data-lucide="arrow-up-right"></i></span>
+            <h3 data-i18n="services.s4.title">Юридическое сопровождение</h3>
+            <p data-i18n="services.s4.desc">Проверим чистоту объекта, подготовим договоры и обеспечим безопасность сделки.</p>
+            <span class="service-link"><span data-i18n="services.s4.link">Получить помощь</span> <i data-lucide="arrow-up-right"></i></span>
           </article>
         </div>
       </div>
@@ -410,13 +411,12 @@
       <div class="container">
         <div class="grid lg:grid-cols-12 gap-10 items-end">
           <div class="lg:col-span-7" data-aos="fade-up">
-            <span class="eyebrow">Как мы работаем</span>
-            <h2 class="section-title">4 шага до вашей идеальной сделки</h2>
+            <span class="eyebrow" data-i18n="process.eyebrow">Как мы работаем</span>
+            <h2 class="section-title" data-i18n="process.title">4 шага до вашей идеальной сделки</h2>
           </div>
           <div class="lg:col-span-5" data-aos="fade-up">
-            <p class="text-brand-ink/70">
-              Прозрачный процесс без сюрпризов. Вы всегда знаете, на каком этапе сделка
-              и что будет дальше.
+            <p class="text-brand-ink/70" data-i18n="process.desc">
+              Прозрачный процесс без сюрпризов. Вы всегда знаете, на каком этапе сделка и что будет дальше.
             </p>
           </div>
         </div>
@@ -425,26 +425,26 @@
           <li class="step-card" data-aos="fade-up">
             <span class="step-num">01</span>
             <i data-lucide="phone-incoming" class="step-icon"></i>
-            <h4>Заявка и брифинг</h4>
-            <p>Свяжемся в течение 15 минут, обсудим задачу и ваш бюджет.</p>
+            <h4 data-i18n="process.p1.title">Заявка и брифинг</h4>
+            <p data-i18n="process.p1.desc">Свяжемся в течение 15 минут, обсудим задачу и ваш бюджет.</p>
           </li>
           <li class="step-card" data-aos="fade-up" data-aos-delay="100">
             <span class="step-num">02</span>
             <i data-lucide="search-check" class="step-icon"></i>
-            <h4>Подбор и анализ</h4>
-            <p>Готовим подборку, анализируем рынок и условия банков.</p>
+            <h4 data-i18n="process.p2.title">Подбор и анализ</h4>
+            <p data-i18n="process.p2.desc">Готовим подборку, анализируем рынок и условия банков.</p>
           </li>
           <li class="step-card" data-aos="fade-up" data-aos-delay="200">
             <span class="step-num">03</span>
             <i data-lucide="map-pinned" class="step-icon"></i>
-            <h4>Просмотр и переговоры</h4>
-            <p>Организуем показы, торгуемся и фиксируем лучшие условия.</p>
+            <h4 data-i18n="process.p3.title">Просмотр и переговоры</h4>
+            <p data-i18n="process.p3.desc">Организуем показы, торгуемся и фиксируем лучшие условия.</p>
           </li>
           <li class="step-card" data-aos="fade-up" data-aos-delay="300">
             <span class="step-num">04</span>
             <i data-lucide="key-square" class="step-icon"></i>
-            <h4>Сделка и ключи</h4>
-            <p>Юридическое оформление и передача ключей. Готово!</p>
+            <h4 data-i18n="process.p4.title">Сделка и ключи</h4>
+            <p data-i18n="process.p4.desc">Юридическое оформление и передача ключей. Готово!</p>
           </li>
         </ol>
       </div>
@@ -457,25 +457,24 @@
       </div>
       <div class="container relative grid lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-6" data-aos="fade-right">
-          <span class="eyebrow !text-brand-gold">Ипотека</span>
-          <h2 class="section-title !text-white">
+          <span class="eyebrow !text-brand-gold" data-i18n="mortgage.eyebrow">Ипотека</span>
+          <h2 class="section-title !text-white" data-i18n="mortgage.title" data-i18n-html="true">
             Подберём ипотеку <span class="text-brand-gold">с минимальной ставкой</span>
           </h2>
-          <p class="mt-5 text-white/70 max-w-xl">
-            В каждом банке свои ставки и условия. Мы анализируем вашу ситуацию
-            и предлагаем самый выгодный вариант — без скрытых комиссий.
+          <p class="mt-5 text-white/70 max-w-xl" data-i18n="mortgage.desc">
+            В каждом банке свои ставки и условия. Мы анализируем вашу ситуацию и предлагаем самый выгодный вариант — без скрытых комиссий.
           </p>
 
           <ul class="mt-8 space-y-3 text-white/85">
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> Сравнение 15+ банков и государственных программ</li>
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> Помощь с пакетом документов под ключ</li>
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> Одобрение даже в сложных случаях</li>
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> Услуга бесплатна для покупателя</li>
+            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> <span data-i18n="mortgage.li1">Сравнение 15+ банков и государственных программ</span></li>
+            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> <span data-i18n="mortgage.li2">Помощь с пакетом документов под ключ</span></li>
+            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> <span data-i18n="mortgage.li3">Одобрение даже в сложных случаях</span></li>
+            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-gold"></i> <span data-i18n="mortgage.li4">Услуга бесплатна для покупателя</span></li>
           </ul>
 
           <a href="#contacts" class="btn-gold mt-9">
             <i data-lucide="calculator" class="w-5 h-5"></i>
-            Рассчитать мою ипотеку
+            <span data-i18n="mortgage.cta">Рассчитать мою ипотеку</span>
           </a>
         </div>
 
@@ -490,7 +489,7 @@
             <div class="bank-tile"><i data-lucide="building"></i><span>Bereke Bank</span></div>
             <div class="bank-tile"><i data-lucide="landmark"></i><span>RBK Bank</span></div>
             <div class="bank-tile bank-tile--gold">
-              <i data-lucide="plus"></i><span>и другие</span>
+              <i data-lucide="plus"></i><span data-i18n="mortgage.others">и другие</span>
             </div>
           </div>
         </div>
@@ -501,12 +500,12 @@
     <section class="py-14 bg-brand-gold">
       <div class="container flex flex-col md:flex-row items-center justify-between gap-6 text-brand-ink">
         <div class="max-w-xl text-center md:text-left">
-          <h3 class="font-display font-extrabold text-2xl sm:text-3xl">Не знаете с чего начать?</h3>
-          <p class="mt-1 opacity-80">Оставьте заявку — перезвоним за 15 минут и расскажем, что делать дальше.</p>
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl" data-i18n="cta.title">Не знаете с чего начать?</h3>
+          <p class="mt-1 opacity-80" data-i18n="cta.desc">Оставьте заявку — перезвоним за 15 минут и расскажем, что делать дальше.</p>
         </div>
         <div class="flex flex-wrap gap-3">
           <a href="tel:+77474425848" class="btn-dark">
-            <i data-lucide="phone-call" class="w-5 h-5"></i> Позвонить
+            <i data-lucide="phone-call" class="w-5 h-5"></i> <span data-i18n="cta.call">Позвонить</span>
           </a>
           <a href="https://wa.me/77474425848" target="_blank" rel="noopener" class="btn-outline-dark">
             <i data-lucide="message-circle-more" class="w-5 h-5"></i> WhatsApp
@@ -519,21 +518,20 @@
     <section id="contacts" class="py-20 lg:py-28">
       <div class="container">
         <div class="max-w-2xl" data-aos="fade-up">
-          <span class="eyebrow">Контакты</span>
-          <h2 class="section-title">Приходите в офис или напишите нам</h2>
-          <p class="mt-4 text-brand-ink/70">
+          <span class="eyebrow" data-i18n="contacts.eyebrow">Контакты</span>
+          <h2 class="section-title" data-i18n="contacts.title">Приходите в офис или напишите нам</h2>
+          <p class="mt-4 text-brand-ink/70" data-i18n="contacts.desc">
             Будем рады видеть вас в нашем офисе. Чай, кофе и грамотная консультация — за наш счёт.
           </p>
         </div>
 
         <div class="mt-12 grid lg:grid-cols-12 gap-8">
-          <!-- Info cards -->
           <div class="lg:col-span-5 space-y-5" data-aos="fade-right">
             <div class="contact-card">
               <span class="contact-ico"><i data-lucide="map-pin"></i></span>
               <div>
-                <p class="contact-label">Адрес</p>
-                <p class="contact-value">
+                <p class="contact-label" data-i18n="contacts.address_label">Адрес</p>
+                <p class="contact-value" data-i18n="contacts.address_value" data-i18n-html="true">
                   г. Астана, район Сарыарка,<br />
                   ул. Богенбай батыра 56А,<br />
                   БЦ «Фаворит», 13 этаж, офис 1302
@@ -544,8 +542,8 @@
             <div class="contact-card">
               <span class="contact-ico"><i data-lucide="clock"></i></span>
               <div>
-                <p class="contact-label">Часы работы</p>
-                <p class="contact-value">
+                <p class="contact-label" data-i18n="contacts.hours_label">Часы работы</p>
+                <p class="contact-value" data-i18n="contacts.hours_value" data-i18n-html="true">
                   Понедельник – Пятница: 10:00 – 19:00<br />
                   Суббота: 10:00 – 16:00<br />
                   Воскресенье: выходной
@@ -557,7 +555,7 @@
               <a href="tel:+77474425848" class="contact-card hover:-translate-y-0.5 transition">
                 <span class="contact-ico"><i data-lucide="phone"></i></span>
                 <div>
-                  <p class="contact-label">Телефон</p>
+                  <p class="contact-label" data-i18n="contacts.phone_label">Телефон</p>
                   <p class="contact-value font-semibold">+7 747 442 5848</p>
                 </div>
               </a>
@@ -579,11 +577,10 @@
             </a>
           </div>
 
-          <!-- Map + Form -->
           <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
             <div class="rounded-3xl overflow-hidden ring-1 ring-black/5 shadow-soft h-[360px] bg-black/5">
               <iframe
-                title="Расположение офиса Comfort Time"
+                title="Comfort Time office"
                 src="https://yandex.com/map-widget/v1/?ll=71.413%2C51.158&mode=search&text=%D0%91%D0%A6%20%D0%A4%D0%B0%D0%B2%D0%BE%D1%80%D0%B8%D1%82%20%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%20%D0%91%D0%BE%D0%B3%D0%B5%D0%BD%D0%B1%D0%B0%D0%B9%20%D0%B1%D0%B0%D1%82%D1%8B%D1%80%D0%B0%2056%D0%90&z=16"
                 width="100%"
                 height="100%"
@@ -594,21 +591,21 @@
             </div>
 
             <form id="contactForm" class="bg-white rounded-3xl p-6 sm:p-8 ring-1 ring-black/5 shadow-soft grid sm:grid-cols-2 gap-4" novalidate>
-              <h3 class="sm:col-span-2 font-display font-bold text-2xl">Оставить заявку</h3>
+              <h3 class="sm:col-span-2 font-display font-bold text-2xl" data-i18n="form.title">Оставить заявку</h3>
               <label class="field field--light">
                 <i data-lucide="user" class="w-4 h-4"></i>
-                <input required name="name" type="text" placeholder="Имя" />
+                <input required name="name" type="text" data-i18n-attr="placeholder" data-i18n="form.name_short" placeholder="Имя" />
               </label>
               <label class="field field--light">
                 <i data-lucide="phone" class="w-4 h-4"></i>
-                <input required name="phone" type="tel" placeholder="Телефон" />
+                <input required name="phone" type="tel" data-i18n-attr="placeholder" data-i18n="form.phone" placeholder="Телефон" />
               </label>
               <label class="field field--light sm:col-span-2">
                 <i data-lucide="message-square" class="w-4 h-4"></i>
-                <textarea name="message" rows="3" placeholder="Кратко опишите задачу (необязательно)"></textarea>
+                <textarea name="message" rows="3" data-i18n-attr="placeholder" data-i18n="form.message_ph" placeholder="Кратко опишите задачу (необязательно)"></textarea>
               </label>
               <button type="submit" class="btn-dark sm:col-span-2 justify-center">
-                <i data-lucide="send" class="w-5 h-5"></i> Отправить
+                <i data-lucide="send" class="w-5 h-5"></i> <span data-i18n="form.submit">Отправить</span>
               </button>
             </form>
           </div>
@@ -626,27 +623,26 @@
             </span>
             <span class="font-display font-extrabold text-xl text-white">Comfort<span class="text-brand-gold">Time</span></span>
           </a>
-          <p class="mt-4 max-w-sm text-sm leading-relaxed">
-            Агентство недвижимости в Астане. Помогаем купить, продать жильё
-            и подобрать выгодную ипотеку. Работаем для вашего комфорта.
+          <p class="mt-4 max-w-sm text-sm leading-relaxed" data-i18n="footer.about">
+            Агентство недвижимости в Астане. Помогаем купить, продать жильё и подобрать выгодную ипотеку. Работаем для вашего комфорта.
           </p>
         </div>
 
         <div class="md:col-span-3">
-          <h5 class="text-white font-display font-bold mb-4">Навигация</h5>
+          <h5 class="text-white font-display font-bold mb-4" data-i18n="footer.nav">Навигация</h5>
           <ul class="space-y-2 text-sm">
-            <li><a href="#about" class="hover:text-brand-gold">О нас</a></li>
-            <li><a href="#services" class="hover:text-brand-gold">Услуги</a></li>
-            <li><a href="#process" class="hover:text-brand-gold">Как работаем</a></li>
-            <li><a href="#mortgage" class="hover:text-brand-gold">Ипотека</a></li>
-            <li><a href="#contacts" class="hover:text-brand-gold">Контакты</a></li>
+            <li><a href="#about" class="hover:text-brand-gold" data-i18n="nav.about">О нас</a></li>
+            <li><a href="#services" class="hover:text-brand-gold" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="#process" class="hover:text-brand-gold" data-i18n="nav.process">Как работаем</a></li>
+            <li><a href="#mortgage" class="hover:text-brand-gold" data-i18n="nav.mortgage">Ипотека</a></li>
+            <li><a href="#contacts" class="hover:text-brand-gold" data-i18n="nav.contacts">Контакты</a></li>
           </ul>
         </div>
 
         <div class="md:col-span-4">
-          <h5 class="text-white font-display font-bold mb-4">Контакты</h5>
+          <h5 class="text-white font-display font-bold mb-4" data-i18n="footer.contacts">Контакты</h5>
           <ul class="space-y-3 text-sm">
-            <li class="flex gap-3"><i data-lucide="map-pin" class="w-4 h-4 mt-1 text-brand-gold"></i> Астана, ул. Богенбай батыра 56А, БЦ «Фаворит», офис 1302</li>
+            <li class="flex gap-3"><i data-lucide="map-pin" class="w-4 h-4 mt-1 text-brand-gold"></i> <span data-i18n="footer.address">Астана, ул. Богенбай батыра 56А, БЦ «Фаворит», офис 1302</span></li>
             <li class="flex gap-3"><i data-lucide="phone" class="w-4 h-4 mt-1 text-brand-gold"></i> <a href="tel:+77474425848" class="hover:text-brand-gold">+7 747 442 5848</a></li>
             <li class="flex gap-3"><i data-lucide="instagram" class="w-4 h-4 mt-1 text-brand-gold"></i> <a href="https://www.instagram.com/comfort_time.official/" target="_blank" rel="noopener" class="hover:text-brand-gold">@comfort_time.official</a></li>
           </ul>
@@ -654,27 +650,25 @@
       </div>
       <div class="border-t border-white/10">
         <div class="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© <span id="year"></span> Comfort Time. Все права защищены.</p>
-          <p>Сделано с заботой для жителей Астаны.</p>
+          <p>© <span id="year"></span> Comfort Time. <span data-i18n="footer.rights">Все права защищены.</span></p>
+          <p data-i18n="footer.made">Сделано с заботой для жителей Астаны.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/77474425848" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Написать в WhatsApp">
+    <a href="https://wa.me/77474425848" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="WhatsApp">
       <i data-lucide="message-circle-more" class="w-6 h-6"></i>
       <span class="fab-pulse"></span>
     </a>
 
-    <!-- Toast -->
-    <div id="toast" class="toast" role="status" aria-live="polite">
+    <!-- <div id="toast" class="toast" role="status" aria-live="polite">
       <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-gold"></i>
-      <span>Заявка отправлена! Мы свяжемся с вами в ближайшее время.</span>
-    </div>
+      <span data-i18n="toast.success">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</span>
+    </div> -->
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="i18n.js" defer></script>
     <script src="script.js" defer></script>
   </body>
 </html>
