@@ -7,8 +7,15 @@
   --ink-3: #3a3f4b;
 }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', system-ui, sans-serif; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  min-width: 320px;
+}
 
 /* ---------- Buttons ---------- */
 .btn-gold,
@@ -93,7 +100,7 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 }
 
 /* ---------- Hero decoration ---------- */
-.hero { min-height: clamp(620px, 92vh, 880px); display: flex; flex-direction: column; }
+.hero { min-height: clamp(620px, 92vh, 880px); display: flex; flex-direction: column; overflow: hidden; }
 .hero > .container { flex: 1; }
 
 .hero-bg {
@@ -134,7 +141,8 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 
 .hero-glow {
   position: absolute;
-  inset: -10% -10% auto auto;
+  top: -10%;
+  right: 0;
   width: 60vw;
   height: 60vw;
   max-width: 720px;
@@ -230,6 +238,12 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 .field:has(textarea) { align-items: flex-start; padding-top: .75rem; padding-bottom: .75rem; height: auto; }
 
 /* ---------- About ---------- */
+#about .container { overflow: visible; }
+#about > .container > .grid { overflow: visible; }
+.about-media { overflow: visible; }
+@media (max-width: 639px) {
+  .badge-float { display: none !important; }
+}
 .feature-item {
   display: flex;
   gap: 1rem;
@@ -415,7 +429,7 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 }
 
 /* ---------- Marquee ---------- */
-.marquee { overflow: hidden; }
+.marquee { overflow: hidden; width: 100%; }
 .marquee__track {
   display: inline-flex;
   gap: 3rem;
@@ -483,6 +497,13 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 /* ---------- Header scroll state ---------- */
 header.is-scrolled {
   box-shadow: 0 10px 30px -18px rgba(45,49,58,.18);
+}
+
+/* ---------- Header mobile ---------- */
+@media (max-width: 639px) {
+  .header-logo-sub { display: none; }
+  #header .container { gap: 0.5rem; padding-left: 0.75rem; padding-right: 0.75rem; }
+  .lang-switch { margin-right: 0; }
 }
 
 /* ---------- Reduced motion ---------- */
