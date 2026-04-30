@@ -500,8 +500,10 @@ header.is-scrolled {
 }
 
 /* ---------- Header mobile ---------- */
+@media (max-width: 1023px) {
+  .header-logo-sub { display: none !important; }
+}
 @media (max-width: 639px) {
-  .header-logo-sub { display: none; }
   #header .container { gap: 0.5rem; padding-left: 0.75rem; padding-right: 0.75rem; }
   .lang-switch { margin-right: 0; }
 }
