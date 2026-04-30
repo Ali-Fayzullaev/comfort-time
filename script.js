@@ -108,14 +108,19 @@
     showToast._t = setTimeout(() => toast.classList.remove('is-visible'), 4200);
   };
 
+  const t = (key) => {
+    const lang = window.CURRENT_LANG || 'ru';
+    return (window.I18N && window.I18N[lang] && window.I18N[lang][key]) || '';
+  };
+
   // Form handler — opens WhatsApp with prefilled message
   const buildWaLink = (data) => {
     const lines = [
-      'Здравствуйте! Заявка с сайта Comfort Time:',
-      data.name ? 'Имя: ' + data.name : '',
-      data.phone ? 'Телефон: ' + data.phone : '',
-      data.service ? 'Услуга: ' + data.service : '',
-      data.message ? 'Сообщение: ' + data.message : '',
+      t('wa.greeting') || 'Заявка с сайта Comfort Time:',
+      data.name ? (t('wa.name') || 'Имя') + ': ' + data.name : '',
+      data.phone ? (t('wa.phone') || 'Телефон') + ': ' + data.phone : '',
+      data.service ? (t('wa.service') || 'Услуга') + ': ' + data.service : '',
+      data.message ? (t('wa.message') || 'Сообщение') + ': ' + data.message : '',
     ].filter(Boolean);
     return 'https://wa.me/77474425848?text=' + encodeURIComponent(lines.join('\n'));
   };
@@ -126,12 +131,11 @@
       const fd = new FormData(form);
       const data = Object.fromEntries(fd.entries());
       if (!data.name || !data.phone || data.phone.replace(/\D/g, '').length < 11) {
-        showToast('Пожалуйста, заполните имя и корректный номер телефона.');
+        showToast(t('toast.error') || 'Пожалуйста, заполните имя и корректный номер телефона.');
         return;
       }
-      // Open WhatsApp in a new tab with prefilled message
       window.open(buildWaLink(data), '_blank', 'noopener');
-      showToast('Заявка отправлена! Откроется WhatsApp для подтверждения.');
+      showToast(t('toast.success') || 'Заявка отправлена!');
       form.reset();
     });
   };
