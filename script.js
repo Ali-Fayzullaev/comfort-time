@@ -122,7 +122,7 @@
       data.service ? (t('wa.service') || 'Услуга') + ': ' + data.service : '',
       data.message ? (t('wa.message') || 'Сообщение') + ': ' + data.message : '',
     ].filter(Boolean);
-    return 'https://wa.me/77474425848?text=' + encodeURIComponent(lines.join('\n'));
+    return 'https://wa.me/77715786331?text=' + encodeURIComponent(lines.join('\n'));
   };
 
   const handleSubmit = (form) => {
