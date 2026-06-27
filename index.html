@@ -510,6 +510,33 @@
       </div>
     </section>
 
+    <!-- OFFICES / PANORAMA -->
+    <section id="addresses" class="py-20 lg:py-28 bg-[#F8F8F6]">
+      <div class="container">
+        <div class="max-w-2xl mx-auto text-center mb-10" data-aos="fade-up">
+          <span class="eyebrow" data-i18n="addresses.eyebrow">Наши офисы</span>
+          <h2 class="section-title" data-i18n="addresses.title">Посетите нас в офисе</h2>
+        </div>
+        <p class="text-center text-brand-gold font-semibold mb-4" style="font-size:16px;"><span data-i18n="addresses.city">г. Алматы</span></p>
+        <div class="flex flex-wrap gap-3 justify-center mb-6">
+          <button onclick="switchPano('embed.html', this)" class="pano-tab active-tab px-5 py-2.5 rounded-full font-medium text-sm transition" style="background:#F1C62A;color:#2D313A;" data-i18n="addresses.tolebi">ул. Толе Би, 243/1</button>
+          <button onclick="switchPano('embed2.html', this)" class="pano-tab px-5 py-2.5 rounded-full font-medium text-sm transition" style="background:#e5e5e5;color:#2D313A;" data-i18n="addresses.makatayeva">ул. Макатаева, 53</button>
+        </div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;height:500px;">
+          <iframe id="panoFrame" src="/panorama/embed.html" width="100%" height="100%" frameborder="0" allowfullscreen style="display:block;"></iframe>
+        </div>
+      </div>
+    </section>
+    <script>
+    function switchPano(src, btn) {
+      document.getElementById('panoFrame').src = '/panorama/' + src;
+      document.querySelectorAll('.pano-tab').forEach(function(b) {
+        b.style.background = '#e5e5e5'; b.style.color = '#2D313A';
+      });
+      btn.style.background = '#F1C62A'; btn.style.color = '#2D313A';
+    }
+    </script>
+
     <!-- CONTACTS -->
     <section id="contacts" class="py-20 lg:py-28">
       <div class="container">
@@ -657,8 +684,12 @@
       </div>
       <div class="border-t border-white/10">
         <div class="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>© <span id="year"></span> Comfort Time. <span data-i18n="footer.rights">Все права защищены.</span></p>
-          <p data-i18n="footer.made">Сделано с заботой для жителей Астаны.</p>
+          <div class="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+            <p>© <span id="year"></span> ТОО «Comfort Time». <span data-i18n="footer.rights">Все права защищены.</span></p>
+            <span class="hidden sm:inline text-white/30">|</span>
+            <p class="text-white/50">БИН: 230240001993</p>
+          </div>
+          <p class="text-white/50 text-center">г. Астана, ул. Богенбай батыр 56А, офис 59</p>
         </div>
       </div>
     </footer>
