@@ -196,7 +196,7 @@
 
           <dl class="mt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
             <div>
-              <dt class="text-3xl sm:text-4xl font-display font-extrabold text-brand-gold"><span data-counter="500">0</span>+</dt>
+              <dt class="text-3xl sm:text-4xl font-display font-extrabold text-brand-gold"><span data-counter="5000">0</span>+</dt>
               <dd class="mt-1 text-sm text-white/60" data-i18n="hero.stat1">довольных клиентов</dd>
             </div>
             <div>
@@ -510,33 +510,6 @@
       </div>
     </section>
 
-    <!-- OFFICES / PANORAMA -->
-    <section id="addresses" class="py-20 lg:py-28 bg-[#F8F8F6]">
-      <div class="container">
-        <div class="max-w-2xl mx-auto text-center mb-10" data-aos="fade-up">
-          <span class="eyebrow" data-i18n="addresses.eyebrow">Наши офисы</span>
-          <h2 class="section-title" data-i18n="addresses.title">Посетите нас в офисе</h2>
-        </div>
-        <p class="text-center text-brand-gold font-semibold mb-4" style="font-size:16px;"><span data-i18n="addresses.city">г. Алматы</span></p>
-        <div class="flex flex-wrap gap-3 justify-center mb-6">
-          <button onclick="switchPano('embed.html', this)" class="pano-tab active-tab px-5 py-2.5 rounded-full font-medium text-sm transition" style="background:#F1C62A;color:#2D313A;" data-i18n="addresses.tolebi">ул. Толе Би, 243/1</button>
-          <button onclick="switchPano('embed2.html', this)" class="pano-tab px-5 py-2.5 rounded-full font-medium text-sm transition" style="background:#e5e5e5;color:#2D313A;" data-i18n="addresses.makatayeva">ул. Макатаева, 53</button>
-        </div>
-        <div style="position:relative;border-radius:16px;overflow:hidden;height:500px;">
-          <iframe id="panoFrame" src="/panorama/embed.html" width="100%" height="100%" frameborder="0" allowfullscreen style="display:block;"></iframe>
-        </div>
-      </div>
-    </section>
-    <script>
-    function switchPano(src, btn) {
-      document.getElementById('panoFrame').src = '/panorama/' + src;
-      document.querySelectorAll('.pano-tab').forEach(function(b) {
-        b.style.background = '#e5e5e5'; b.style.color = '#2D313A';
-      });
-      btn.style.background = '#F1C62A'; btn.style.color = '#2D313A';
-    }
-    </script>
-
     <!-- CONTACTS -->
     <section id="contacts" class="py-20 lg:py-28">
       <div class="container">
@@ -557,7 +530,8 @@
                 <p class="contact-value" data-i18n="contacts.address_value" data-i18n-html="true">
                   <strong>Астана:</strong><br />
                   ул. Богенбай батыра 56А, БЦ «Фаворит», 13 этаж, офис 1302<br />
-                  ул. Р. Кошкарбаева 56<br /><br />
+                  ул. Р. Кошкарбаева 56<br />
+                  Мәңгілік Ел даңғылы 52, Н1 18, ЖК «Promenade EXPO»<br /><br />
                   <strong>Алматы:</strong><br />
                   ул. Толе би 243/1, 2 этаж<br />
                   ул. Калдаякова 41<br /><br />
@@ -568,7 +542,9 @@
                   <strong>Тараз:</strong><br />
                   ул. Толе би 34, БЦ «ASKHAT PLAZA», 2 этаж, офис 206<br /><br />
                   <strong>Актобе:</strong><br />
-                  пр. Абилкайыр хана 69
+                  пр. Абилкайыр хана 69<br /><br />
+                  <strong>Атырау:</strong><br />
+                  ул. Жасай Тайманов 1/2, БЦ «Noble Square», 4 этаж, офис 405
                 </p>
               </div>
             </div>
